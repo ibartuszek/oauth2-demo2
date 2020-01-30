@@ -1,9 +1,9 @@
-package com.example.clienttest;
+package com.example.clienttest.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.example.clienttest")
 public class ClientTestApplication {
 
 	public static void main(String[] args) {
