@@ -8,7 +8,7 @@ import com.example.clienttest.domain.ExampleResponse;
 @Component
 public class ResourceServerClient {
 
-    private static final String resourceServerExampleUrl = "http://localhost:7001/resource/example";
+    private static final String resourceServerExampleUrl = "http://localhost:8080/oauth2example/resource/example";
     private static final String SOMETHING_WENT_WRONG = "Something went wrong";
 
     private final RestTemplate restTemplate = new RestTemplate();

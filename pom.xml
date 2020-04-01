@@ -7,11 +7,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>oauth demo app</name>
 	<description>Demo project for Spring Boot with OAUTH2</description>
+	<packaging>pom</packaging>
 
 	<modules>
-		<module>authentication-test-server</module>
+		<module>client-with-access-key-test</module>
 		<module>resource-test-server</module>
-		<module>client-test</module>
+		<module>spring-authorization-test-server</module>
 	</modules>
 
 </project>
