@@ -11,8 +11,10 @@
 
 	<modules>
 		<module>client-with-access-key-test</module>
+		<module>client-with-user-login-test</module>
 		<module>resource-test-server</module>
 		<module>spring-authorization-test-server</module>
+		<module>keycloak-authorization-test-server</module>
 	</modules>
 
 </project>
