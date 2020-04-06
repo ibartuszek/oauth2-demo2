@@ -31,4 +31,4 @@ build/
 .vscode/
 
 ### Secrets ###
-keystore.jks
+**/secrets/*
