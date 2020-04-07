@@ -1,0 +1,22 @@
+# Default values
+[ req ]
+default_bits = 2048
+default_md = sha256
+prompt = no
+# TODO: yes?
+encrypt_key = no
+distinguished_name = dn
+req_extensions = req_ext
+
+# Custom values: (with mock data) It must be configured!
+[ dn ]
+C = CH
+ST = State
+L = City
+O = com.example.oauth2.tutorial
+OU = Oauth2_Tutorial
+CN = O2_Tutor
+
+# Custom values: (with mock data) It must be configured!
+[ req_ext ]
+subjectAltName = DNS:com.example.oauth2.tutorial
