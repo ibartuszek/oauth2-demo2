@@ -19,6 +19,9 @@ import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 
+import com.example.authorizationserver.configuration.jwt.JwtProperties;
+import com.example.authorizationserver.configuration.jwt.JwtTokenStoreDecorator;
+
 @Configuration
 @EnableAuthorizationServer
 @PropertySource("classpath:secrets/secrets.properties")

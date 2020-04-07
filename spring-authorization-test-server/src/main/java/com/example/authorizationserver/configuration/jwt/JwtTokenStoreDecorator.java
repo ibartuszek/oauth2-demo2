@@ -1,4 +1,4 @@
-package com.example.authorizationserver.configuration;
+package com.example.authorizationserver.configuration.jwt;
 
 import java.security.KeyPair;
 import java.util.Map;
