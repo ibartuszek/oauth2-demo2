@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  resource-test-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: resource-test-server:latest
+    expose:
+      - 8080
+    ports:
+    - 8091:8080

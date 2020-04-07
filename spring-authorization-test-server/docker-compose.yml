@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  spring-authorization-test-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: spring-authorization-test-server:latest
+    expose:
+      - 8080
+    ports:
+    - 8090:8080

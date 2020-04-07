@@ -3,4 +3,4 @@ spring:
     name: oauth2-test-authentication-server
 
 server:
-  port: 7000
+  port: 8080
