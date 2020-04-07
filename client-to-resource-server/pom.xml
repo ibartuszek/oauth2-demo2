@@ -8,9 +8,9 @@
 		<version>2.2.4.RELEASE</version>
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>client-with-access-key-test</artifactId>
+	<artifactId>client-to-resource-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>client-with-access-key-test</name>
+	<name>client-with-user-login-test</name>
 	<description>Demo project for Spring Boot with OAUTH2</description>
 
 	<properties>
