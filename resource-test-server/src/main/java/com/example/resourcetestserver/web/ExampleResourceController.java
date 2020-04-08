@@ -2,6 +2,7 @@ package com.example.resourcetestserver.web;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,10 +18,13 @@ public class ExampleResourceController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExampleResourceController.class);
 
+    @Value("${spring.application.name:application}")
+    private String applicationName;
+
     @PreAuthorize("hasRole('ROLE_USER')")
     @RequestMapping(value = "oauth2example/resource/exampleForUsers", method = RequestMethod.GET, produces = APPLICATION_JSON)
     public ExampleResource getTestResponseForUsers() {
-        LOGGER.info("Resource server returns: \'" + TEST_RESPONSE + "\' test response (for users)");
+        LOGGER.info("{} returns '{}' test response (for users)", applicationName, TEST_RESPONSE);
         return ExampleResource.builder()
                 .withMessage(TEST_RESPONSE)
                 .build();
@@ -29,7 +33,7 @@ public class ExampleResourceController {
     @PreAuthorize("hasRole('ROLE_CLIENT')")
     @RequestMapping(value = "oauth2example/resource/exampleForClients", method = RequestMethod.GET, produces = APPLICATION_JSON)
     public ExampleResource getTestResponseForClients() {
-        LOGGER.info("Resource server returns: \'" + TEST_RESPONSE + "\' test response (for clients)");
+        LOGGER.info("{} returns '{}' test response (for clients)", applicationName, TEST_RESPONSE);
         return ExampleResource.builder()
             .withMessage(TEST_RESPONSE)
             .build();

@@ -1,4 +1,4 @@
-package com.example.authorizationserver.configuration.logging;
+package com.example.resourcetestserver.app.configuration.filter;
 
 import java.io.IOException;
 
@@ -19,10 +19,10 @@ import org.springframework.stereotype.Component;
 @Order(1)
 public class LoggingFilter implements Filter {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(LoggingFilter.class);
+
     @Value("${spring.application.name:application}")
     private String applicationName;
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(LoggingFilter.class);
 
     @Override
     public void doFilter(final ServletRequest servletRequest, final ServletResponse servletResponse, final FilterChain filterChain)
