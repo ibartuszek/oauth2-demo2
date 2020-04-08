@@ -83,10 +83,5 @@ then
   create_property_files "$1" "$2"
   move_secrets_into_destination_folders
 else
-  echo "You should provide two arguments."
-  echo "First: general password for the key generation."
-  echo "Second: the key alias which should be contained by the key store."
+  exit 1
 fi
-
-read -r -p "Press enter to continue"
-
