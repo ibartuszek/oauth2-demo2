@@ -16,5 +16,7 @@ services:
     image: resource-test-server:latest
     expose:
       - 8080
+      - 5005
     ports:
       - 8091:8080
+      - 5005:5005
