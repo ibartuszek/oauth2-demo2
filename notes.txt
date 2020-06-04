@@ -1,0 +1,15 @@
+###################################################################################################
+Spring authorization server:
+###################################################################################################
+https://blog.marcosbarbero.com/centralized-authorization-jwt-spring-boot2/
+https://blogs.oracle.com/blogbypuneeth/steps-to-create-a-self-signed-certificate-using-openssl
+openssl req -newkey rsa:2048 -x509 -keyout cakey.pem -out cacert.pem -days 3650
+openssl pkcs12 -export -in cacert.pem -inkey cakey.pem -out identity.p12 -name "mykey"
+keytool -importkeystore -srckeystore identity.p12 -srcstoretype pkcs12 -destkeystore keystore.jks
+
+###################################################################################################
+Keycloak:
+###################################################################################################
+https://www.baeldung.com/spring-boot-keycloak
+https://quay.io/repository/keycloak/keycloak
+docker pull quay.io/keycloak/keycloak

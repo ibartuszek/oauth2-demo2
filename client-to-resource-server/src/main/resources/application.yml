@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: oauth2-test-test-client
+
+server:
+  port: 8080
+
+url:
+  resource-server: http://resource-test-server:8080/
+  authorization-server: http://spring-authorization-test-server:8080/
+
+# TODO: Hide this information
+secrets:
+  client-id: clientId
+  client-secret: secret

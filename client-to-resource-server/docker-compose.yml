@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  resource-test-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: client-to-resource-server.jar:latest
+    expose:
+      - 8080
+      - 5006
+    ports:
+    - 8080:8080
+    - 5006:5006
