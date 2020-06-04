@@ -1,0 +1,6 @@
+@startuml
+client_to_resource_server -> authorization_server: get bearer token
+authorization_server -> client_to_resource_server: provide bearer token
+client_to_resource_server -> resource_server: get protected resource with bearer token
+resource_server -> client_to_resource_server: provide resource
+@enduml
