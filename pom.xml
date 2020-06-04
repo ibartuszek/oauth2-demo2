@@ -13,7 +13,6 @@
 		<module>client-to-resource-server</module>
 		<module>resource-test-server</module>
 		<module>spring-authorization-test-server</module>
-		<module>keycloak-authorization-test-server</module>
 	</modules>
 
 </project>
